@@ -1,0 +1,23 @@
+.text, textarea, h1 {
+  color: red;
+  font-size: 20px;
+}
+
+.btn {
+  border: 3px solid yellow;
+}
+
+h1 {
+  color: black;
+}
+
+h2 {
+  color: white;
+}
+
+.text, textarea, h1 {
+  content: "React";
+  content: "JavaScript";
+}
+
+/*# sourceMappingURL=style.css.map */

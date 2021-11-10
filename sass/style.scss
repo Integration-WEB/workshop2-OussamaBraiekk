@@ -1,0 +1,47 @@
+@import "mixins";
+
+.text{
+    color: red;
+    font-size: 20px;
+}
+
+textarea, h1{
+    @extend .text;
+}
+
+.btn{
+    @include border();
+}
+
+
+@function background($color){
+    @if ($color == white){
+        @return black;
+    }@else{
+        @return white;
+    }
+}
+
+h1{
+    color: background(white);
+}
+
+h2{
+    color: background(red);
+}
+
+$languages: "React", "Spring", "JavaScript";
+
+@function first($list){
+    @return nth($list,1);
+}
+
+@function last($list){
+    @return nth($list,-1);
+    //@return nth($list,length($list));
+}
+
+.text{
+    content: first($languages);
+    content: last($languages);
+}
